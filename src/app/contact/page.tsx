@@ -254,7 +254,7 @@ export default function ContactPage() {
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-black mb-3">Do you offer job placement assistance?</h3>
                   <p className="text-gray-600">
-                    Yes! We have a 95% job placement rate and provide career coaching, interview prep, and direct
+                    Yes! We have a 97% job placement rate and provide career coaching, interview prep, and direct
                     connections to our partner companies.
                   </p>
                 </CardContent>
