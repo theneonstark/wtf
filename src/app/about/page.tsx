@@ -4,7 +4,9 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Target, Users, Award, Zap, Globe, BookOpen, Heart, Lightbulb, Shield, Rocket } from "lucide-react"
+import { Target, Users, Award, Zap, 
+  // Globe  ,
+   BookOpen, Heart, Lightbulb, Shield, Rocket } from "lucide-react"
 import Image from "next/image"
 
 export default function AboutPage() {
@@ -73,65 +75,72 @@ export default function AboutPage() {
 
   const timeline = [
     {
-      year: "2019",
+      year: "2024 Dec",
       title: "The Vision",
       description:
         "WTF was founded with a mission to prepare developers for the future of technology. Started with a small team of passionate educators.",
-      milestone: "Company Founded",
+      milestone: "Foundation Founded",
     },
     {
-      year: "2020",
+      year: "2025 Mar",
       title: "First Cohort",
       description:
         "Launched our first course with 50 students, achieving 95% job placement rate. Established partnerships with 10 tech companies.",
       milestone: "50 Students",
     },
     {
-      year: "2021",
+      year: "2025 Apr",
       title: "Rapid Growth",
       description:
-        "Expanded to 1000+ students across multiple cutting-edge technology tracks. Introduced AI and blockchain courses.",
-      milestone: "1,000+ Students",
+        "Expanded to 100+ students across multiple cutting-edge technology tracks. Introduced AI and blockchain courses.",
+      milestone: "100+ Students",
     },
+    // {
+    //   year: "2022",
+    //   title: "Industry Recognition",
+    //   description:
+    //     "Recognized as Best Tech Education Platform by TechCrunch. Launched corporate training programs for Fortune 500 companies.",
+    //   milestone: "Industry Awards",
+    // },
+    // {
+    //   year: "2023",
+    //   title: "Global Expansion",
+    //   description:
+    //     "Expanded internationally with students from 50+ countries. Launched scholarship programs for underrepresented communities.",
+    //   milestone: "Global Reach",
+    // },
+    // {
+    //   year: "2025 May",
+    //   title: "Innovation Hub",
+    //   description:
+    //     "Serving 15,000+ students worldwide with 98% satisfaction rate. Opened innovation labs and research centers.",
+    //   milestone: "15,000+ Students",
+    // },
     {
-      year: "2022",
-      title: "Industry Recognition",
+      year: "2025 May",
+      title: "Collaborated with SEA",
       description:
-        "Recognized as &#39;Best Tech Education Platform&#39; by TechCrunch. Launched corporate training programs for Fortune 500 companies.",
-      milestone: "Industry Awards",
-    },
-    {
-      year: "2023",
-      title: "Global Expansion",
-      description:
-        "Expanded internationally with students from 50+ countries. Launched scholarship programs for underrepresented communities.",
-      milestone: "Global Reach",
-    },
-    {
-      year: "2024",
-      title: "Innovation Hub",
-      description:
-        "Serving 15,000+ students worldwide with 98% satisfaction rate. Opened innovation labs and research centers.",
-      milestone: "15,000+ Students",
+        "Formed a strategic partnership with SEA (Skill Earth Academy) to enhance global educational impact.",
+      milestone: "Collaboration",
     },
   ]
 
   const stats = [
     {
       icon: <Users className="h-6 w-6 sm:h-8 sm:w-8" />,
-      number: "15,000+",
+      number: "900+",
       label: "Students Trained",
-      description: "Across 50+ countries",
+      description: "Well Placed",
     },
-    { icon: <Award className="h-6 w-6 sm:h-8 sm:w-8" />, number: "95%", label: "Job Placement Rate", description: "Within 6 months" },
+    { icon: <Award className="h-6 w-6 sm:h-8 sm:w-8" />, number: "73%", label: "Job Placement Rate", description: "Within 6 months" },
     {
       icon: <Target className="h-6 w-6 sm:h-8 sm:w-8" />,
       number: "500+",
       label: "Partner Companies",
-      description: "Including Fortune 500",
+      description: "Including 25+",
     },
     { icon: <Zap className="h-6 w-6 sm:h-8 sm:w-8" />, number: "98%", label: "Satisfaction Rate", description: "Student feedback" },
-    { icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />, number: "50+", label: "Countries", description: "Global presence" },
+    // { icon: <Globe className="h-6 w-6 sm:h-8 sm:w-8" />, number: "50+", label: "Countries", description: "Global presence" },
     { icon: <BookOpen className="h-6 w-6 sm:h-8 sm:w-8" />, number: "100+", label: "Courses", description: "Across 10 domains" },
   ]
 
@@ -182,10 +191,10 @@ export default function AboutPage() {
               education.
             </p>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
-              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">Founded 2019</Badge>
-              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">15,000+ Graduates</Badge>
-              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">50+ Countries</Badge>
-              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">95% Job Placement</Badge>
+              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">Founded 2025</Badge>
+              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">900+ Graduates</Badge>
+              {/* <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">50+ Countries</Badge> */}
+              <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">73% Job Placement</Badge>
             </div>
           </motion.div>
         </div>
@@ -205,7 +214,7 @@ export default function AboutPage() {
                 Our <span className="gradient-text">Mission</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
-                At WTF (What The Future), we believe that traditional education isn&#39;t keeping pace with technological
+                At WTF (Web Tech Foundation), we believe that traditional education isn&#39;t keeping pace with technological
                 advancement. We&#39;re bridging that gap by providing cutting-edge, future-focused education that prepares
                 developers for tomorrow&#39;s challenges.
               </p>

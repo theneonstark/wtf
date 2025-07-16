@@ -15,22 +15,22 @@ export default function ContactPage() {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Visit Us",
-      details: ["123 Future Street", "Tech District, SF 94105", "United States"],
+      details: ["Meethapur", "Badarpur, New Delhi - 110044", "India"],
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
+      details: ["+91 9211579757", "+91 9211578941"],
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email Us",
-      details: ["hello@wtf.dev", "support@wtf.dev"],
+      details: ["info@webtechfoundation.in", "support@webtechfoundation.in"],
     },
     {
       icon: <Clock className="h-6 w-6" />,
       title: "Office Hours",
-      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat: 10:00 AM - 4:00 PM", "Sun: Closed"],
+      details: ["Mon - Fri: 9:00 AM - 7:00 PM", "Sat: 10:00 AM - 5:00 PM", "Sun: Closed"],
     },
   ]
 

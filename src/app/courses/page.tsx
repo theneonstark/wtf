@@ -48,7 +48,7 @@ export default function CoursesPage() {
       rating: 4.9,
       price: "$299",
       level: "Advanced",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/Nextjs-Vs-React.jpg",
       features: ["React 18", "Next.js 14", "TypeScript", "Server Components", "Tailwind CSS"],
       instructor: "Sarah Chen",
       projects: 8,
@@ -63,7 +63,7 @@ export default function CoursesPage() {
       rating: 4.8,
       price: "$399",
       level: "Intermediate",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/javascript-full.jpg",
       features: ["MongoDB", "Express.js", "React", "Node.js", "GraphQL"],
       instructor: "Marcus Johnson",
       projects: 12,
@@ -78,7 +78,7 @@ export default function CoursesPage() {
       rating: 4.9,
       price: "$499",
       level: "Advanced",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/AI-Powered-Web-Development.png",
       features: ["TensorFlow.js", "OpenAI API", "Machine Learning", "Neural Networks", "Computer Vision"],
       instructor: "Dr. Emily Zhang",
       projects: 6,
@@ -93,7 +93,7 @@ export default function CoursesPage() {
       rating: 4.7,
       price: "$249",
       level: "Beginner",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/UIUX.webp",
       features: ["Figma", "Design Systems", "User Research", "Prototyping", "Accessibility"],
       instructor: "Alex Rivera",
       projects: 5,
@@ -108,7 +108,7 @@ export default function CoursesPage() {
       rating: 4.8,
       price: "$449",
       level: "Advanced",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/devops-architecture.jpg",
       features: ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
       instructor: "David Kim",
       projects: 10,
@@ -123,7 +123,7 @@ export default function CoursesPage() {
       rating: 4.6,
       price: "$329",
       level: "Intermediate",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/mobilefirstdev.png",
       features: ["React Native", "Flutter", "PWA", "Mobile UI", "App Store"],
       instructor: "Lisa Park",
       projects: 7,
@@ -138,7 +138,7 @@ export default function CoursesPage() {
       rating: 4.8,
       price: "$549",
       level: "Advanced",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/blockchain.png",
       features: ["Solidity", "Ethereum", "Web3.js", "Smart Contracts", "DeFi"],
       instructor: "James Wilson",
       projects: 6,
@@ -153,7 +153,7 @@ export default function CoursesPage() {
       rating: 4.7,
       price: "$379",
       level: "Intermediate",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/cyber.jpeg",
       features: ["Ethical Hacking", "OWASP", "Security Testing", "Cryptography", "Network Security"],
       instructor: "Michael Brown",
       projects: 5,
@@ -168,7 +168,7 @@ export default function CoursesPage() {
       rating: 4.6,
       price: "$429",
       level: "Intermediate",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/gaming.jpeg",
       features: ["Unity 3D", "C#", "Game Physics", "Animation", "VR/AR"],
       instructor: "Chris Taylor",
       projects: 8,
@@ -183,7 +183,7 @@ export default function CoursesPage() {
       rating: 4.8,
       price: "$359",
       level: "Beginner",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/Data-Analysis-with-python.webp",
       features: ["Python", "Pandas", "NumPy", "Matplotlib", "Scikit-learn"],
       instructor: "Dr. Anna Rodriguez",
       projects: 9,
@@ -198,7 +198,7 @@ export default function CoursesPage() {
       rating: 4.9,
       price: "$389",
       level: "Advanced",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/nodets.png",
       features: ["TypeScript", "Node.js", "Microservices", "GraphQL", "Testing"],
       instructor: "Robert Chen",
       projects: 7,
@@ -213,7 +213,7 @@ export default function CoursesPage() {
       rating: 4.7,
       price: "$199",
       level: "Intermediate",
-      image: "/placeholder.svg?height=200&width=400",
+      image: "/images/paw.webp",
       features: ["Service Workers", "Web App Manifest", "Push Notifications", "Offline Storage", "Performance"],
       instructor: "Jennifer Lee",
       projects: 4,
@@ -358,8 +358,8 @@ export default function CoursesPage() {
                     <Image
                       src={course.image || "/placeholder.svg"}
                       alt={course.title}
-                      width={100}
-                      height={100}
+                      width={400}
+                      height={400}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
@@ -378,7 +378,7 @@ export default function CoursesPage() {
                         {getCategoryIcon(course.category)}
                         {course.category}
                       </Badge>
-                      <span className="text-2xl font-bold text-black">{course.price}</span>
+                      {/* <span className="text-2xl font-bold text-black">{course.price}</span> */}
                     </div>
                     <CardTitle className="text-black group-hover:text-gray-600 transition-colors">
                       {course.title}
@@ -491,13 +491,13 @@ export default function CoursesPage() {
                         <span className="text-gray-600">Duration:</span>
                         <span className="font-semibold">{path.duration}</span>
                       </div>
-                      <div className="flex justify-between items-center mb-4">
+                      {/* <div className="flex justify-between items-center mb-4">
                         <span className="text-gray-600">Bundle Price:</span>
                         <div>
                           <span className="font-bold text-xl">{path.price}</span>
                           <Badge className="ml-2 bg-green-100 text-green-800">Save {path.savings}</Badge>
                         </div>
-                      </div>
+                      </div> */}
                       <Button className="w-full gradient-bg text-white">Start Learning Path</Button>
                     </div>
                   </CardContent>
