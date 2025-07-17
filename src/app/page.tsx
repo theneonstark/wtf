@@ -26,7 +26,7 @@ import {
 } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
-import { BlogPreview } from "@/components/blog-preview"
+// import { BlogPreview } from "@/components/blog-preview"
 
 export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -48,13 +48,14 @@ export default function HomePage() {
       icon: <Users className="h-6 sm:h-8 w-6 sm:w-8" />,
       title: "Community Driven",
       description: "Join a vibrant community of future-focused developers",
-      details: "15,000+ active members, mentorship, and networking",
+      details: "150+ active members, mentorship, and networking",
     },
     {
       icon: <Target className="h-6 sm:h-8 w-6 sm:w-8" />,
       title: "Industry Partnerships",
-      description: "Direct connections with 500+ top tech companies for job placement",
-      details: "Google, Meta, Netflix, OpenAI, and more",
+      description: "Direct connections with 25+ top tech companies for job placement",
+      // details: "Google, Meta, Netflix, OpenAI, and more",
+      details: "",
     },
     {
       icon: <Award className="h-6 sm:h-8 w-6 sm:w-8" />,
@@ -125,7 +126,7 @@ export default function HomePage() {
       name: "James Wilson",
       role: "Blockchain Developer at Coinbase",
       content:
-        "The emerging tech courses kept me ahead of the curve. Now I&apos;m building the future of finance with Web3 technologies.",
+        "The emerging tech courses kept me ahead of the curve. Now I'm building the future of finance with Web3 technologies.",
       rating: 5,
       image: "/placeholder.svg?height=80&width=80",
       course: "Blockchain & Web3",
@@ -136,11 +137,11 @@ export default function HomePage() {
   const stats = [
     {
       icon: <Users className="h-6 sm:h-8 w-6 sm:w-8" />,
-      number: "15,000+",
+      number: "900+",
       label: "Students Trained",
-      description: "Across 50+ countries",
+      description: "Across 50+ placements",
     },
-    { icon: <Award className="h-6 sm:h-8 w-6 sm:w-8" />, number: "95%", label: "Job Placement Rate", description: "Within 6 months" },
+    { icon: <Award className="h-6 sm:h-8 w-6 sm:w-8" />, number: "73%", label: "Job Placement Rate", description: "Within 6 months" },
     {
       icon: <TrendingUp className="h-6 sm:h-8 w-6 sm:w-8" />,
       number: "185%",
@@ -151,7 +152,7 @@ export default function HomePage() {
       icon: <Star className="h-6 sm:h-8 w-6 sm:w-8" />,
       number: "4.9/5",
       label: "Student Satisfaction",
-      description: "Based on 5000+ reviews",
+      description: "Based on 500+ reviews",
     },
   ]
 
@@ -204,7 +205,7 @@ export default function HomePage() {
     {
       question: "Is there a money-back guarantee?",
       answer:
-        "We offer a 30-day money-back guarantee. If you&apos;re not satisfied with your learning experience within the first 30 days, we&apos;ll provide a full refund, no questions asked.",
+        "We offer a 30-day money-back guarantee. If you're not satisfied with your learning experience within the first 30 days, we'll provide a full refund, no questions asked.",
     },
     {
       question: "Can I learn while working full-time?",
@@ -244,12 +245,11 @@ export default function HomePage() {
 
   const instructors = [
     {
-      name: "Sarah Chen",
-      role: "Lead React Instructor",
+      name: "Sahil Gautam",
+      role: "Lead Graphic Designer",
       experience: "Ex-Google, 12+ years",
       image: "/placeholder.svg?height=100&width=100",
-      students: 3200,
-    },
+      students: 3200,    },
     {
       name: "Dr. Emily Zhang",
       role: "AI Research Director",
@@ -458,7 +458,7 @@ export default function HomePage() {
 
           <div className="text-center">
             <Button
-              className="border-black text-black hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
+              className="border-1 border-black text-black hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
             >
               View All Courses
               <ArrowRight className="ml-2 h-3 sm:h-4 w-3 sm:w-4" />
@@ -716,7 +716,7 @@ export default function HomePage() {
       </section>
 
       {/* Blog Preview */}
-      <BlogPreview />
+      {/* <BlogPreview /> */}
 
       {/* Final CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-r from-gray-50 via-gray-100 to-gray-50">

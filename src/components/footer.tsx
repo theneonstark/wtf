@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Github, Twitter, Linkedin, MessageCircle } from "lucide-react"
+import {Twitter, Linkedin, MessageCircle, Youtube } from "lucide-react"
 import Image from "next/image"
 
 export function Footer() {
@@ -54,13 +54,14 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
           {/* Connect */}
           <div>
             <h4 className="text-lg font-semibold text-black mb-4">Connect</h4>
             <div className="flex space-x-4">
               <Button variant="ghost" size="icon" className="text-gray-600 hover:text-black">
-                <Github className="h-5 w-5" />
+                <Link href={'https://www.youtube.com/@WTFCodee'}>
+                  <Youtube className="h-5 w-5" />
+                </Link>
               </Button>
               <Button variant="ghost" size="icon" className="text-gray-600 hover:text-black">
                 <Twitter className="h-5 w-5" />
@@ -71,8 +72,27 @@ export function Footer() {
                 </Link>
               </Button>
               <Button variant="ghost" size="icon" className="text-gray-600 hover:text-black">
-                <MessageCircle className="h-5 w-5" />
+                <Link href={"https://wa.me/919211578941"}>
+                    <MessageCircle className="h-5 w-5" />
+                </Link>
               </Button>
+            </div>
+
+            {/* Policies */}
+            <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+              <div className="flex flex-wrap justify-center gap-4 mt-2 text-sm">
+                <Link href="/privacy-policy" className="hover:text-black">
+                  Privacy Policy
+                </Link>
+                <span>•</span>
+                <Link href="/cookie-policy" className="hover:text-black">
+                  Cookie Policy
+                </Link>
+                <span>•</span>
+                <Link href="/terms-conditions" className="hover:text-black">
+                  Terms & Conditions
+                </Link>
+              </div>
             </div>
           </div>
         </div>
