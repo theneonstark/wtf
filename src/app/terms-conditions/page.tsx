@@ -12,12 +12,15 @@ export default function TermsConditionsPage() {
       title: "Acceptance of Terms",
       content: [
         {
+            subtitle: "",
           text: "By accessing and using the WTF (Web Tech Foundation) platform, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.",
         },
         {
+            subtitle: "",
           text: "These Terms of Service constitute a legally binding agreement between you and WTF regarding your use of our educational platform, courses, and related services.",
         },
         {
+            subtitle: "",
           text: "We reserve the right to update these terms at any time without prior notice. Your continued use of the platform after any changes indicates your acceptance of the new terms.",
         },
       ],
