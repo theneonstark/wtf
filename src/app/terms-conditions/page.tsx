@@ -163,7 +163,7 @@ export default function TermsConditionsPage() {
   ]
 
   return (
-    <div className="pt-16 min-h-screen">
+    <div className="pt-16 min-h-screen relative z-10">
       {/* Header */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -178,7 +178,7 @@ export default function TermsConditionsPage() {
               Please read these terms and conditions carefully before using our educational platform and services.
             </p>
             <div className="flex items-center justify-center gap-4">
-              <p className="text-sm text-gray-500">Last updated: July 17, 2021</p>
+              <p className="text-sm text-gray-500">Last updated: July 17, 2025</p>
               <Badge className="bg-green-100 text-green-800">Version 1.0</Badge>
             </div>
           </motion.div>

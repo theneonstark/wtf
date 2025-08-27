@@ -10,8 +10,8 @@ import Background from "@/components/background"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "WTF - Web Tech Foundation | Decode the Future with Us",
-  description: "Bold tech-education startup helping learners prepare for the future of web and software development.",
+  title: "Best Computer Institute in Delhi | Web Tech Foundation",
+  description: "Web Tech Foundation is a reputed organization in Delhi-NCR which provides Training in PHP, Java, NIELIT(DOEACC), Digital Marketing, Tally",
   keywords: "web development, programming, education, future tech, coding bootcamp",
 }
 

@@ -12,7 +12,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold gradient-text mb-4">
-              <Image src={'/logo.png'} alt="wtf-logo" width={160} height={100} />
+              <Image src={'/logo.png'} alt="wtf-logo" width={180} height={100} />
             </h3>
             <p className="text-gray-600 mb-6 max-w-md">
               Decode the Future with Us. Join thousands of developers preparing for tomorrow&#39;s tech landscape.
@@ -97,9 +97,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
-          <p>&copy; 2024 WTF - Web Tech Foundation. All rights reserved.</p>
-          <p>Powered By <Link href={'https://www.infinimorphconsulting.com/'} target="_blank">InfiniMorph Consulting</Link></p>
+        <div className="flex justify-between items-center border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+          <Image src={'/certified/msme.jpg'} width={150} height={150} alt="msme" className="mix-blend-multiply"/>
+          <div>
+            <p>&copy; 2024 WTF - Web Tech Foundation. All rights reserved.</p>
+            <p>Powered By <Link href={'https://www.infinimorphconsulting.com/'} target="_blank">InfiniMorph Consulting</Link></p>
+          </div>
         </div>
       </div>
     </footer>

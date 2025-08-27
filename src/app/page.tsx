@@ -18,7 +18,7 @@ import {
   Clock,
   TrendingUp,
   PlayCircle,
-  Calendar,
+  // Calendar,
   MessageSquare,
   Briefcase,
   Rocket,
@@ -195,7 +195,7 @@ export default function HomePage() {
     {
       question: "Do you offer job placement assistance?",
       answer:
-        "Yes! We have a 95% job placement rate and provide comprehensive career support including resume reviews, interview preparation, salary negotiation coaching, and direct connections to our 500+ partner companies.",
+        "Yes! We have a 95% job placement rate and provide comprehensive career support including resume reviews, interview preparation, salary negotiation coaching, and direct connections to our 10+ partner companies.",
     },
     {
       question: "What are the prerequisites?",
@@ -219,50 +219,54 @@ export default function HomePage() {
     },
   ]
 
-  const upcomingEvents = [
-    {
-      title: "Free Web Development Workshop",
-      date: "Dec 20, 2024",
-      time: "7:00 PM EST",
-      type: "Workshop",
-      attendees: 245,
-    },
-    {
-      title: "AI in Web Development Masterclass",
-      date: "Dec 22, 2024",
-      time: "2:00 PM EST",
-      type: "Masterclass",
-      attendees: 189,
-    },
-    {
-      title: "Career Fair with Tech Giants",
-      date: "Dec 28, 2024",
-      time: "10:00 AM EST",
-      type: "Career Event",
-      attendees: 567,
-    },
-  ]
+  // const upcomingEvents = [
+  //   {
+  //     title: "Free Web Development Workshop",
+  //     date: "Dec 20, 2024",
+  //     time: "7:00 PM EST",
+  //     type: "Workshop",
+  //     attendees: 245,
+  //   },
+  //   {
+  //     title: "AI in Web Development Masterclass",
+  //     date: "Dec 22, 2024",
+  //     time: "2:00 PM EST",
+  //     type: "Masterclass",
+  //     attendees: 189,
+  //   },
+  //   {
+  //     title: "Career Fair with Tech Giants",
+  //     date: "Dec 28, 2024",
+  //     time: "10:00 AM EST",
+  //     type: "Career Event",
+  //     attendees: 567,
+  //   },
+  // ]
 
   const instructors = [
     {
       name: "Sahil Gautam",
       role: "Lead Graphic Designer",
-      experience: "Ex-Google, 12+ years",
+      experience: "3+ years",
       image: "/placeholder.svg?height=100&width=100",
-      students: 3200,    },
+      students: 328,
+      rate: 4.5,
+    },
     {
-      name: "Dr. Emily Zhang",
-      role: "AI Research Director",
-      experience: "PhD AI, 50+ papers",
+      name: "Mohd Alquama",
+      role: "Software Developer",
+      experience: "Fintech, 2+ Years",
       image: "/placeholder.svg?height=100&width=100",
-      students: 1800,
+      students: 130,
+      rate: 4.7,
     },
     {
       name: "Marcus Johnson",
       role: "Full Stack Architect",
       experience: "Ex-Netflix, 14+ years",
       image: "/placeholder.svg?height=100&width=100",
-      students: 2900,
+      students: 200,
+      rate: 4.3,
     },
   ]
 
@@ -285,7 +289,7 @@ export default function HomePage() {
               🚀 The Future is Now - Join 900+ Developers
             </Badge>
 
-            <motion.h1
+            <motion.div
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -294,9 +298,9 @@ export default function HomePage() {
               <span className="gradient-text">Decode the Future</span>
               <br />
               <span className="text-black">with Us</span>
-            </motion.h1>
+            </motion.div>
 
-            <motion.p
+            <motion.div
               className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -305,7 +309,7 @@ export default function HomePage() {
               Join the bold tech-education revolution. Master tomorrow&apos;s technologies today with AI, Blockchain,
               Advanced Web Development, and cutting-edge frameworks. Get job-ready in 6-16 weeks with our
               industry-leading curriculum.
-            </motion.p>
+            </motion.div>
 
             <motion.div
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12"
@@ -355,12 +359,11 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              Why Choose <span className="gradient-text">WTF</span>?
-            </h2>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+              Welcome to <span className="gradient-text">Web Tech Foundation</span>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              We&apos;re not just another coding bootcamp. We&apos;re preparing you for the future of technology with cutting-edge
-              curriculum, industry partnerships, and proven results.
+              The WTF - Web Tech Foundation, recognized by Department of Electronics , Govt. of India, is a well-reputed organization in the field of IT industry, is running its educational division by the name of “Web Tech Foundation (WTF)“
             </p>
           </motion.div>
 
@@ -399,9 +402,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Most Popular <span className="gradient-text">Courses</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Start your journey with our most sought-after programs designed for rapid career transformation
             </p>
@@ -477,9 +480,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Learn from <span className="gradient-text">Industry Experts</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Our instructors are seasoned professionals from top tech companies with real-world experience
             </p>
@@ -534,9 +537,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Success <span className="gradient-text">Stories</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Hear from our graduates who are now shaping the future of technology at top companies worldwide
             </p>
@@ -616,7 +619,7 @@ export default function HomePage() {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+      {/* <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12 sm:mb-16"
@@ -625,9 +628,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Upcoming <span className="gradient-text">Events</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Join our free workshops, masterclasses, and networking events
             </p>
@@ -669,7 +672,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-12 sm:py-16 md:py-20">
@@ -681,9 +684,9 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">
               Frequently Asked <span className="gradient-text">Questions</span>
-            </h2>
+            </h1>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
               Get answers to common questions about our programs and learning experience
             </p>
@@ -728,9 +731,9 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
                 Ready to <span className="gradient-text">Shape Your Future</span>?
-              </h2>
+              </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
                 Join 15,000+ developers who are already building tomorrow&apos;s applications. Start your transformation
                 today with our proven curriculum, expert mentorship, and industry connections.

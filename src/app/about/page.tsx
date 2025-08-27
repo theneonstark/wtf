@@ -22,14 +22,14 @@ export default function AboutPage() {
       achievements: ["Forbes 30 Under 30", "Google Developer Expert", "TEDx Speaker"],
     },
     {
-      name: "Sahil Gautam",
-      role: "Sr. Graphic Designer",
-      bio: "Ex-Meta developer advocate with expertise in modern web technologies. Designs future-ready curricula that bridge industry gaps.",
+      name: "Abhishek",
+      role: "AI Research Director",
+      bio: "Leading AI researcher specializing in machine learning applications. Published 50+ papers in top-tier conferences.",
       image: "/placeholder.svg?height=300&width=300",
-      skills: ["Curriculum Design", "React", "Developer Experience"],
-      experience: "12 years",
-      education: "MS Software Engineering, MIT",
-      achievements: ["React Core Contributor", "Conference Speaker", "Open Source Advocate"],
+      skills: ["Machine Learning", "Deep Learning", "Research"],
+      experience: "16 years",
+      education: "PhD AI, Carnegie Mellon",
+      achievements: ["AI Research Excellence", "Patent Holder", "IEEE Fellow"],
     },
     {
       name: "Mohd Alquama",
@@ -42,14 +42,14 @@ export default function AboutPage() {
       achievements: ["AWS Solutions Architect", "Kubernetes Certified", "Tech Mentor of the Year"],
     },
     {
-      name: "Abhishek",
-      role: "AI Research Director",
-      bio: "Leading AI researcher specializing in machine learning applications. Published 50+ papers in top-tier conferences.",
+      name: "Sahil Gautam",
+      role: "Sr. Graphic Designer",
+      bio: "Ex-Meta developer advocate with expertise in modern web technologies. Designs future-ready curricula that bridge industry gaps.",
       image: "/placeholder.svg?height=300&width=300",
-      skills: ["Machine Learning", "Deep Learning", "Research"],
-      experience: "16 years",
-      education: "PhD AI, Carnegie Mellon",
-      achievements: ["AI Research Excellence", "Patent Holder", "IEEE Fellow"],
+      skills: ["Curriculum Design", "React", "Developer Experience"],
+      experience: "12 years",
+      education: "MS Software Engineering, MIT",
+      achievements: ["React Core Contributor", "Conference Speaker", "Open Source Advocate"],
     },
     {
       name: "Sabra",
@@ -177,9 +177,9 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="pt-16 min-h-screen">
+    <div className="pt-16 min-h-screen relative z-10">
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 relative z-10">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
