@@ -30,7 +30,7 @@ export default function EnrollPage() {
   const params = useParams()
   const courseId = params.courseId as string
   const [currentStep, setCurrentStep] = useState(1)
-  const [selectedPlan, setSelectedPlan] = useState("full")
+  // const [selectedPlan, setSelectedPlan] = useState("full")
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -307,7 +307,7 @@ export default function EnrollPage() {
       <div className="pt-16 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-black mb-4">Course Not Found</h1>
-          <p className="text-gray-600">The course you're looking for doesn't exist.</p>
+          <p className="text-gray-600">The course you&apos;re looking for doesn&apos;t exist.</p>
         </div>
       </div>
     )
@@ -330,7 +330,7 @@ export default function EnrollPage() {
 
   const handleEnroll = () => {
     // Handle enrollment logic here
-    console.log("Enrolling with data:", { course: course.id, plan: selectedPlan, formData })
+    // console.log("Enrolling with data:", { course: course.id, plan: selectedPlan, formData })
   }
 
   return (
@@ -405,7 +405,7 @@ export default function EnrollPage() {
                   <CardContent>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h3 className="font-semibold text-black mb-3">What You'll Learn</h3>
+                        <h3 className="font-semibold text-black mb-3">What You&apos;ll Learn</h3>
                         <ul className="space-y-2">
                           {course.features.map((feature, index) => (
                             <li key={index} className="flex items-start gap-2">
@@ -730,7 +730,7 @@ export default function EnrollPage() {
               </Card>
 
               {/* Pricing */}
-              <Card className="bg-white border-gray-200 shadow-sm">
+              {/* <Card className="bg-white border-gray-200 shadow-sm">
                 <CardHeader>
                   <CardTitle>Choose Your Plan</CardTitle>
                 </CardHeader>
@@ -771,7 +771,7 @@ export default function EnrollPage() {
                     ))}
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               {/* Guarantees */}
               <Card className="bg-white border-gray-200 shadow-sm">
