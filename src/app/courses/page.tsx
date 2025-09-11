@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
 import {
   Clock,
   Users,
@@ -417,7 +418,9 @@ export default function CoursesPage() {
                       </div>
                     </div>
 
-                    <Button className="w-full gradient-bg text-white font-semibold hover:opacity-90">Enroll Now</Button>
+                    <Button asChild className="w-full gradient-bg text-white font-semibold hover:opacity-90">
+                      <Link href={`/enroll/${course.id}`}>Enroll Now</Link>
+                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>

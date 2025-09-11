@@ -26,6 +26,7 @@ import {
 } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 // import { BlogPreview } from "@/components/blog-preview"
 
 export default function HomePage() {
@@ -73,8 +74,8 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      role: "Full Stack Developer at Meta",
+      name: "Shivam",
+      role: "Web Developer",
       content:
         "WTF transformed my career. The future-focused approach gave me skills that set me apart in interviews. The mentorship program was incredible!",
       rating: 5,
@@ -158,28 +159,31 @@ export default function HomePage() {
 
   const courses = [
     {
+      id: "advanced-react-nextjs",
       title: "Advanced React & Next.js",
       description: "Master modern React patterns and Next.js 14 for production-ready applications",
       duration: "12 weeks",
-      students: 1250,
+      students: 150,
       rating: 4.9,
       price: "",
       image: "/images/Nextjs-Vs-React.jpg",
     },
     {
+      id: "ai-powered-web-apps",
       title: "AI-Powered Web Applications",
       description: "Integrate AI and machine learning into modern web applications",
       duration: "10 weeks",
-      students: 567,
+      students: 167,
       rating: 4.9,
       price: "",
       image: "/images/AI-Powered-Web-Development.png",
     },
     {
+      id: "full-stack-javascript",
       title: "Full Stack JavaScript",
       description: "Complete MERN stack development from frontend to backend",
       duration: "16 weeks",
-      students: 890,
+      students: 190,
       rating: 4.8,
       price: "",
       image: "/images/javascript-full.jpg",
@@ -248,7 +252,7 @@ export default function HomePage() {
       name: "Sahil Gautam",
       role: "Lead Graphic Designer",
       experience: "3+ years",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/experts/sahil_sir.png",
       students: 328,
       rate: 4.5,
     },
@@ -256,15 +260,15 @@ export default function HomePage() {
       name: "Mohd Alquama",
       role: "Software Developer",
       experience: "Fintech, 2+ Years",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/experts/alquama_sir.png",
       students: 130,
       rate: 4.7,
     },
     {
-      name: "Marcus Johnson",
-      role: "Full Stack Architect",
-      experience: "Ex-Netflix, 14+ years",
-      image: "/placeholder.svg?height=100&width=100",
+      name: "Amit Shah",
+      role: "Full Stack Developer",
+      experience: "4+ years",
+      image: "/experts/amit_sir.png",
       students: 200,
       rate: 4.3,
     },
@@ -451,7 +455,9 @@ export default function HomePage() {
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-lg sm:text-2xl font-bold text-black">{course.price}</span>
-                      <Button className="gradient-bg text-white text-sm sm:text-base">Enroll Now</Button>
+                      <Button asChild className="gradient-bg text-white">
+                        <Link href={`/enroll/${course.id || "advanced-react-nextjs"}`}>Enroll Now</Link>
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -462,8 +468,10 @@ export default function HomePage() {
           <div className="text-center">
             <Button
               className="border-1 border-black text-black hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
-            >
-              View All Courses
+            >              
+                  <Link href="/courses">
+                    View All Courses
+                  </Link>
               <ArrowRight className="ml-2 h-3 sm:h-4 w-3 sm:w-4" />
             </Button>
           </div>
@@ -516,7 +524,7 @@ export default function HomePage() {
                       </div>
                       <div className="flex items-center gap-1">
                         <Star className="h-3 sm:h-4 w-3 sm:w-4 text-yellow-400" />
-                        4.9
+                        {instructor.rate}
                       </div>
                     </div>
                   </CardContent>
@@ -764,9 +772,11 @@ export default function HomePage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Button size="lg" className="gradient-bg text-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 neon-glow">
-                  Start Your Journey Today
-                  <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
+                <Button size="lg" asChild className="gradient-bg text-white font-semibold text-lg px-8 py-4 neon-glow">
+                  <Link href="/courses">
+                    Start Your Journey Today
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
                 </Button>
                 <Button
                   size="lg"
