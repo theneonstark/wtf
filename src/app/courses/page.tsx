@@ -40,7 +40,7 @@ export default function CoursesPage() {
 
   const courses = [
     {
-      id: 1,
+      id: "advanced-react-nextjs",
       title: "Advanced React & Next.js",
       description: "Master modern React patterns, Next.js 14, Server Components, and advanced state management",
       category: "Web Dev",
@@ -55,7 +55,7 @@ export default function CoursesPage() {
       projects: 8,
     },
     {
-      id: 2,
+      id: "full-stack-javascript",
       title: "Full Stack JavaScript Mastery",
       description: "Complete MERN stack development with MongoDB, Express, React, and Node.js",
       category: "Full Stack",
@@ -70,7 +70,7 @@ export default function CoursesPage() {
       projects: 12,
     },
     {
-      id: 3,
+      id: "ai-powered-web-apps",
       title: "AI-Powered Web Applications",
       description: "Integrate AI and machine learning into modern web applications using TensorFlow and OpenAI",
       category: "AI/ML",
@@ -85,7 +85,7 @@ export default function CoursesPage() {
       projects: 6,
     },
     {
-      id: 4,
+      id: "modern-ui-ux-design",
       title: "Modern UI/UX Design Systems",
       description: "Design systems, prototyping, user research, and experience optimization",
       category: "UI/UX",
@@ -100,7 +100,7 @@ export default function CoursesPage() {
       projects: 5,
     },
     {
-      id: 5,
+      id: "devops-cloud-architecture",
       title: "DevOps & Cloud Architecture",
       description: "Modern deployment strategies, containerization, and cloud infrastructure management",
       category: "DevOps",
@@ -115,7 +115,7 @@ export default function CoursesPage() {
       projects: 10,
     },
     {
-      id: 6,
+      id: "mobile-first-development",
       title: "Mobile-First Development",
       description: "Responsive design, PWAs, and cross-platform mobile app development",
       category: "Mobile",
@@ -130,7 +130,7 @@ export default function CoursesPage() {
       projects: 7,
     },
     {
-      id: 7,
+      id: "blockchain-web3-development",
       title: "Blockchain & Web3 Development",
       description: "Smart contracts, DeFi applications, and decentralized web development",
       category: "Blockchain",
@@ -145,7 +145,7 @@ export default function CoursesPage() {
       projects: 6,
     },
     {
-      id: 8,
+      id: "cybersecurity-fundamentals",
       title: "Cybersecurity Fundamentals",
       description: "Web security, penetration testing, and secure coding practices",
       category: "Cybersecurity",
@@ -160,7 +160,7 @@ export default function CoursesPage() {
       projects: 5,
     },
     {
-      id: 9,
+      id: "game-development-unity",
       title: "Game Development with Unity",
       description: "2D/3D game development, physics, animations, and game design principles",
       category: "Game Dev",
@@ -175,7 +175,7 @@ export default function CoursesPage() {
       projects: 8,
     },
     {
-      id: 10,
+      id: "python-data-science",
       title: "Python Data Science & Analytics",
       description: "Data analysis, visualization, machine learning, and statistical modeling",
       category: "AI/ML",
@@ -190,7 +190,7 @@ export default function CoursesPage() {
       projects: 9,
     },
     {
-      id: 11,
+      id: "advanced-typescript-nodejs",
       title: "Advanced TypeScript & Node.js",
       description: "Enterprise-level backend development with TypeScript, Node.js, and microservices",
       category: "Full Stack",
@@ -205,7 +205,7 @@ export default function CoursesPage() {
       projects: 7,
     },
     {
-      id: 12,
+      id: "progressive-web-apps",
       title: "Progressive Web Apps (PWA)",
       description: "Build fast, reliable, and engaging web applications that work offline",
       category: "Web Dev",

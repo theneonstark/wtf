@@ -6,61 +6,72 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Target, Users, Award, Zap, 
   // Globe  ,
-   BookOpen, Heart, Lightbulb, Shield, Rocket } from "lucide-react"
+   BookOpen, Heart, Lightbulb, Shield, Rocket} from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function AboutPage() {
   const team = [
     {
-      name: "Mohd Shahid",
-      role: "Co-Founder & CEO",
-      bio: "Former Software engineer with 4+ years in development and 2+ years in tech education. Passionate about democratizing access to cutting-edge technology education.",
-      image: "/experts/shahid.png",
-      skills: ["Leadership", "AI/ML", "Product Strategy"],
-      experience: "15 years",
-      education: "PhD Computer Science, Stanford",
-      achievements: ["Forbes 30 Under 30", "Google Developer Expert", "TEDx Speaker"],
-    },
-    {
-      name: "Abhishek",
-      role: "AI Research Director",
-      bio: "Leading AI researcher specializing in machine learning applications. Published 50+ papers in top-tier conferences.",
-      image: "/placeholder.svg?height=300&width=300",
-      skills: ["Machine Learning", "Deep Learning", "Research"],
-      experience: "16 years",
-      education: "PhD AI, Carnegie Mellon",
-      achievements: ["AI Research Excellence", "Patent Holder", "IEEE Fellow"],
-    },
-    {
-      name: "Mohd Alquama",
-      role: "Lead Instructor",
-      bio: "Full-stack architect with expertise in scalable systems. Mentored 1000+ developers into successful tech careers.",
-      image: "/placeholder.svg?height=300&width=300",
-      skills: ["Full Stack", "Cloud Architecture", "Mentoring"],
-      experience: "14 years",
-      education: "BS Computer Science, UC Berkeley",
-      achievements: ["AWS Solutions Architect", "Kubernetes Certified", "Tech Mentor of the Year"],
-    },
-    {
-      name: "Sahil Gautam",
-      role: "Sr. Graphic Designer",
-      bio: "Ex-Meta developer advocate with expertise in modern web technologies. Designs future-ready curricula that bridge industry gaps.",
-      image: "/experts/sahil_sir.png",
-      skills: ["Curriculum Design", "React", "Developer Experience"],
-      experience: "12 years",
-      education: "MS Software Engineering, MIT",
-      achievements: ["React Core Contributor", "Conference Speaker", "Open Source Advocate"],
-    },
-    {
-      name: "Sabra",
-      role: "Digital Marketer Expert",
-      bio: "Design systems expert focused on accessible, future-forward interfaces. Previously at Apple and Airbnb.",
-      image: "/placeholder.svg?height=300&width=300",
-      skills: ["Design Systems", "Accessibility", "User Research"],
-      experience: "11 years",
-      education: "MFA Interaction Design, RISD",
-      achievements: ["Design Systems Award", "Accessibility Champion", "UX Research Pioneer"],
-    },
+  name: "Masooma",
+  role: "Founder & Director",
+  bio: "Visionary leader with a strong background in technology and education. Dedicated to shaping the future of tech learning and making innovation accessible worldwide.",
+  image: "/experts/woman-user.png",
+  skills: ["Leadership", "Strategic Vision", "Business Development"],
+  experience: "15 years",
+  education: "MBA in Technology Management, Harvard Business School",
+  achievements: ["Founded multiple successful ventures", "Top 100 Women in Tech", "Keynote Speaker at Global Tech Summits"],
+},
+{
+  name: "Mohd Shahid",
+  role: "Co-Founder & CEO",
+  bio: "Entrepreneur and strategist with expertise in building scalable businesses and driving digital transformation. Passionate about leading teams and creating sustainable impact.",
+  image: "/experts/shahid.png",
+  skills: ["Entrepreneurship", "Business Strategy", "Team Building"],
+  experience: "12 years",
+  education: "Master’s in Business Administration, IIM Bangalore",
+  achievements: ["Built and scaled startups", "Young CEO Award", "Featured in Business Today’s 40 Under 40"],
+},
+{
+  name: "Sabra",
+  role: "COO & Managing Director",
+  bio: "Operational excellence specialist with deep expertise in managing teams, optimizing processes, and ensuring organizational growth and stability.",
+  image: "/placeholder.svg?height=300&width=300",
+  skills: ["Operations Management", "Process Optimization", "People Management"],
+  experience: "11 years",
+  education: "Master’s in Management, London Business School",
+  achievements: ["Operational Leadership Award", "Best COO Recognition", "Led global expansion initiatives"],
+},
+    // {
+    //   name: "Abhishek",
+    //   role: "AI Research Director",
+    //   bio: "Leading AI researcher specializing in machine learning applications. Published 50+ papers in top-tier conferences.",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   skills: ["Machine Learning", "Deep Learning", "Research"],
+    //   experience: "16 years",
+    //   education: "PhD AI, Carnegie Mellon",
+    //   achievements: ["AI Research Excellence", "Patent Holder", "IEEE Fellow"],
+    // },
+    // {
+    //   name: "Mohd Alquama",
+    //   role: "Lead Instructor",
+    //   bio: "Full-stack architect with expertise in scalable systems. Mentored 1000+ developers into successful tech careers.",
+    //   image: "/placeholder.svg?height=300&width=300",
+    //   skills: ["Full Stack", "Cloud Architecture", "Mentoring"],
+    //   experience: "14 years",
+    //   education: "BS Computer Science, UC Berkeley",
+    //   achievements: ["AWS Solutions Architect", "Kubernetes Certified", "Tech Mentor of the Year"],
+    // },
+    // {
+    //   name: "Sahil Gautam",
+    //   role: "Sr. Graphic Designer",
+    //   bio: "Ex-Meta developer advocate with expertise in modern web technologies. Designs future-ready curricula that bridge industry gaps.",
+    //   image: "/experts/sahil_sir.png",
+    //   skills: ["Curriculum Design", "React", "Developer Experience"],
+    //   experience: "12 years",
+    //   education: "MS Software Engineering, MIT",
+    //   achievements: ["React Core Contributor", "Conference Speaker", "Open Source Advocate"],
+    // },
     // {
     //   name: "David Kim",
     //   role: "DevOps Architect",
@@ -172,9 +183,22 @@ export default function AboutPage() {
   ]
 
   const partnerships = [
-    { name: "InfiniMorph Consulting", logo: "/infini-logo.png", type: "Powered By" },
-    { name: "SEA - Skill Earth Academy", logo: "/sea-logo.png", type: "Co-powered by" },
-  ]
+  { 
+    name: "InfiniMorph Consulting", 
+    logo: "/infini-logo.png", 
+    type: "Powered By", 
+    link: "https://www.infinimorphconsulting.com/",
+    description: "Powered by InfiniMorph Consulting, driving innovation through web, mobile, branding, and digital transformation solutions."
+  },
+  { 
+    name: "SEA - Skill Earth Academy", 
+    logo: "/sea-logo.png", 
+    type: "Co-powered by", 
+    link: "https://skillsearthacademy.com/",
+    description: "Co-powered by Skill Earth Academy, enabling skill-based learning and empowering students with industry-ready knowledge."
+  }
+]
+
 
   return (
     <div className="pt-16 min-h-screen relative z-10">
@@ -328,17 +352,17 @@ export default function AboutPage() {
                     <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 text-center">{member.bio}</p>
 
                     <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
-                      <div className="text-center">
+                      {/* <div className="text-center">
                         <span className="text-xs sm:text-sm font-medium text-gray-700">Experience: </span>
                         <span className="text-xs sm:text-sm text-gray-600">{member.experience}</span>
-                      </div>
-                      <div className="text-center">
+                      </div> */}
+                      {/* <div className="text-center">
                         <span className="text-xs sm:text-sm font-medium text-gray-700">Education: </span>
                         <span className="text-xs sm:text-sm text-gray-600">{member.education}</span>
-                      </div>
+                      </div> */}
                     </div>
 
-                    <div className="mb-3 sm:mb-4">
+                    {/* <div className="mb-3 sm:mb-4">
                       <h4 className="text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2 text-center">Achievements</h4>
                       <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
                         {member.achievements.map((achievement, idx) => (
@@ -347,7 +371,7 @@ export default function AboutPage() {
                           </Badge>
                         ))}
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="flex flex-wrap gap-1 sm:gap-2 justify-center">
                       {member.skills.map((skill, skillIndex) => (
@@ -444,17 +468,22 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <Card className="bg-white border-gray-200 p-4 sm:p-6 h-full shadow-sm flex flex-col justify-between">
+                <Card className="bg-white border-gray-200 p-4 sm:p-6 h-full shadow-sm flex flex-col items-center justify-between">
+                  <div>
+                    <h3 className="text-base sm:text-lg font-semibold text-black mb-1">{partner.name}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600">{partner.type}</p>
+                  </div>
+                  <Link href={partner.link} target="_blank">
                   <Image
                     src={partner.logo || "/placeholder.svg"}
                     alt={partner.name}
                     width={150}
                     height={150}
-                    className="max-h-24 sm:max-h-32 w-auto mx-auto mb-3 sm:mb-4 opacity-60 hover:opacity-100 transition-opacity duration-300 object-contain"
+                    className="max-h-24 w-auto mx-auto mb-3 sm:mb-4 transition-opacity duration-300 object-contain"
                   />
+                  </Link>
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-black mb-1">{partner.name}</h3>
-                    <p className="text-xs sm:text-sm text-gray-600">{partner.type}</p>
+                    <p className="text-xs sm:text-sm text-gray-600">{partner.description}</p>
                   </div>
                 </Card>
               </motion.div>
