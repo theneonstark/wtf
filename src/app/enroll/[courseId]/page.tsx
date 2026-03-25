@@ -25,6 +25,7 @@ import {
   User,
 } from "lucide-react"
 import { useParams } from "next/navigation"
+import Image from "next/image"
 
 export default function EnrollPage() {
   const params = useParams()
@@ -1038,9 +1039,11 @@ export default function EnrollPage() {
               </div>
 
               {/* <div className="flex items-center gap-4">
-                <img
+                <Image
                   src={course.instructor.image || "/placeholder.svg"}
                   alt={course.instructor.name}
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
@@ -1051,9 +1054,11 @@ export default function EnrollPage() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-              <img
+              <Image
                 src={course.image || "/placeholder.svg"}
                 alt={course.title}
+                width={800}
+                height={400}
                 className="w-full h-80 object-cover rounded-lg shadow-lg"
               />
             </motion.div>

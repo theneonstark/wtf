@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Clock, Users, Star, ArrowRight, Filter } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
 
 export default function EnrollmentPage() {
@@ -193,9 +194,11 @@ export default function EnrollmentPage() {
               >
                 <Card className="bg-white border-gray-200 hover:border-black/50 transition-all duration-300 h-full group shadow-sm">
                   <div className="relative overflow-hidden">
-                    <img
+                    <Image
                       src={course.image || "/placeholder.svg"}
                       alt={course.title}
+                      width={400}
+                      height={200}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4 flex gap-2">

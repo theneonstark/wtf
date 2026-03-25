@@ -228,9 +228,11 @@ export default function SuccessStoriesPage() {
             <Card className="bg-white border-gray-200 overflow-hidden shadow-sm">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative h-96 lg:h-auto">
-                  <img
+                  <Image
                     src={successStories[currentStory].image || "/placeholder.svg"}
                     alt={successStories[currentStory].name}
+                    width={500}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, User, ArrowRight, Clock } from "lucide-react"
+import Image from "next/image"
 
 export function BlogPreview() {
   const blogPosts = [
@@ -87,9 +88,11 @@ export function BlogPreview() {
           >
             <Card className="bg-white border-gray-200 overflow-hidden shadow-sm h-full">
               <div className="relative">
-                <img
+                <Image
                   src={blogPosts[0].image || "/placeholder.svg"}
                   alt={blogPosts[0].title}
+                  width={800}
+                  height={400}
                   className="w-full h-64 object-cover"
                 />
                 <Badge className="absolute top-4 left-4 bg-black text-white">Featured</Badge>
