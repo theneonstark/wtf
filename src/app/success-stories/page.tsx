@@ -9,6 +9,25 @@ import { ChevronLeft, ChevronRight, Star, TrendingUp, Users, Award } from "lucid
 import Image from "next/image"
 
 export default function SuccessStoriesPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.webtechfoundation.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Success Stories",
+        "item": "https://www.webtechfoundation.in/success-stories"
+      }
+    ]
+  };
+
   const [currentStory, setCurrentStory] = useState(0)
 
   const successStories = [
@@ -170,6 +189,10 @@ export default function SuccessStoriesPage() {
 
   return (
     <div className="pt-16 min-h-screen relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -230,7 +253,7 @@ export default function SuccessStoriesPage() {
                 <div className="relative h-96 lg:h-auto">
                   <Image
                     src={successStories[currentStory].image || "/placeholder.svg"}
-                    alt={successStories[currentStory].name}
+                    alt={`Student Success Story: ${successStories[currentStory].name} | Web Tech Foundation Placement`}
                     width={500}
                     height={300}
                     className="w-full h-full object-cover"
@@ -327,7 +350,7 @@ export default function SuccessStoriesPage() {
                 <div className="text-center">
                   <Image
                     src={company.logo || "/placeholder.svg"}
-                    alt={company.name}
+                    alt={`${company.name} Logo - Top Recruiter for Web Tech Foundation Students`}
                     width={100}
                     height={100}
                     className="h-12 mx-auto mb-2 opacity-60 hover:opacity-100 transition-opacity duration-300"

@@ -1007,8 +1007,67 @@ export default function EnrollPage() {
     // console.log("Enrolling with data:", { course: course.id, plan: selectedPlan, formData })
   }
 
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": course.title,
+    "description": course.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "Web Tech Foundation",
+      "sameAs": "https://www.webtechfoundation.in"
+    },
+    "image": `https://www.webtechfoundation.in${course.image || "/images/Nextjs-Vs-React.jpg"}`,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": course.rating,
+      "reviewCount": course.reviews
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "category": "Paid",
+        "price": (course as any).pricing.full.price,
+        "priceCurrency": "USD"
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.webtechfoundation.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://www.webtechfoundation.in/courses"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": course.title,
+        "item": `https://www.webtechfoundation.in/enroll/${course.id}`
+      }
+    ]
+  };
+
   return (
     <div className="pt-16 min-h-screen bg-transparent relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="py-12 border-b relative z-10 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1056,7 +1115,7 @@ export default function EnrollPage() {
             <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
               <Image
                 src={course.image || "/placeholder.svg"}
-                alt={course.title}
+                alt={`Join ${course.title} at Web Tech Foundation - Best Computer Institute in Badarpur`}
                 width={800}
                 height={400}
                 className="w-full h-80 object-cover rounded-lg shadow-lg"

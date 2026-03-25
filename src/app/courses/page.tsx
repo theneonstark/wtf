@@ -23,6 +23,24 @@ import {
 import Image from "next/image"
 
 export default function CoursesPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.webtechfoundation.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Courses",
+        "item": "https://www.webtechfoundation.in/courses"
+      }
+    ]
+  };
   const [activeFilter, setActiveFilter] = useState("All")
 
   const filters = [
@@ -262,6 +280,10 @@ export default function CoursesPage() {
 
   return (
     <div className="pt-16 w-full min-h-screen relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Header */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -358,7 +380,7 @@ export default function CoursesPage() {
                   <div className="relative overflow-hidden">
                     <Image
                       src={course.image || "/placeholder.svg"}
-                      alt={course.title}
+                      alt={`Best ${course.title} course in Delhi NCR - Web Tech Foundation`}
                       width={400}
                       height={400}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"

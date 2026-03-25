@@ -16,11 +16,19 @@ export const metadata: Metadata = {
   keywords:
     "best computer institute in delhi, computer classes in delhi ncr, coding classes badarpur, web development course delhi, AI course new delhi, react next.js training delhi ncr, python course delhi, digital marketing course delhi, full stack developer course delhi ncr, web tech foundation, WTF delhi, computer training institute near me, NIELIT delhi, DOEACC delhi, programming classes south delhi",
   openGraph: {
-    title: "Best Computer Institute in Delhi NCR | Web Tech Foundation",
+    title: "Web Tech Foundation | Best Computer Institute in Delhi NCR",
     description:
-      "Delhi NCR's top-rated computer training institute. Master Full Stack Development, AI, React, Next.js & more at Badarpur, New Delhi. 900+ students trained.",
+      "Delhi NCR's top-rated computer training institute in Badarpur. Master Full Stack Development, AI, React, Next.js & more. Job-oriented courses with 73% placement.",
     url: "https://www.webtechfoundation.in",
     siteName: "Web Tech Foundation",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Web Tech Foundation - Best Computer Institute in Delhi NCR",
+      },
+    ],
     locale: "en_IN",
     type: "website",
   },
@@ -29,6 +37,7 @@ export const metadata: Metadata = {
     title: "Best Computer Institute in Delhi NCR | Web Tech Foundation",
     description:
       "Delhi NCR's top-rated computer training institute. Master Full Stack Development, AI, React, Next.js & more.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.webtechfoundation.in",

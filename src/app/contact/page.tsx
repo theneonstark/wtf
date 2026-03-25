@@ -60,12 +60,41 @@ export default function ContactPage() {
       "latitude": 28.5087,
       "longitude": 77.3071
     },
+    "priceRange": "$$",
+    "sameAs": [
+      "https://www.facebook.com/webtechfoundation",
+      "https://www.instagram.com/wtfcodee",
+      "https://www.linkedin.com/company/webtechfoundation"
+    ],
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Delhi NCR"
+    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
       "opens": "09:00",
       "closes": "19:00"
     }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.webtechfoundation.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact Us",
+        "item": "https://www.webtechfoundation.in/contact"
+      }
+    ]
   };
 
   return (
@@ -73,6 +102,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* Hero Section */}
       <section className="py-20 relative z-10">

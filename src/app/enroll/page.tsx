@@ -196,7 +196,7 @@ export default function EnrollmentPage() {
                   <div className="relative overflow-hidden">
                     <Image
                       src={course.image || "/placeholder.svg"}
-                      alt={course.title}
+                      alt={`Join ${course.title} at Web Tech Foundation - Best Computer Institute in Delhi NCR`}
                       width={400}
                       height={200}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"

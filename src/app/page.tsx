@@ -458,7 +458,7 @@ export default function HomePage() {
                   <div className="relative overflow-hidden">
                     <Image
                       src={course.image || "/placeholder.svg"}
-                      alt={course.title}
+                      alt={`Best ${course.title} course in Delhi NCR - Web Tech Foundation`}
                       className="w-full h-40 sm:h-48 object-cover"
                       width={400}
                       height={400}
@@ -540,7 +540,7 @@ export default function HomePage() {
                   <CardContent className="p-4 sm:p-8">
                     <Image
                       src={instructor.image || "/placeholder.svg"}
-                      alt={instructor.name}
+                      alt={`Expert Instructor ${instructor.name} at Web Tech Foundation New Delhi`}
                       className="w-20 sm:w-24 h-20 sm:h-24 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
                       width={100}
                       height={100}
@@ -601,7 +601,7 @@ export default function HomePage() {
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                       <Image
                         src={testimonials[currentTestimonial].image || "/placeholder.svg"}
-                        alt={testimonials[currentTestimonial].name}
+                        alt={`Student Success Story: ${testimonials[currentTestimonial].name} - Web Tech Foundation Badarpur`}
                         className="w-12 sm:w-16 h-12 sm:h-16 rounded-full object-cover"
                         width={100}
                         height={100}

@@ -11,6 +11,24 @@ import Image from "next/image"
 import Link from "next/link"
 
 export default function AboutPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.webtechfoundation.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://www.webtechfoundation.in/about"
+      }
+    ]
+  };
   const team = [
     {
   name: "Masooma",
@@ -202,6 +220,10 @@ export default function AboutPage() {
 
   return (
     <div className="pt-16 min-h-screen relative z-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* Hero Section */}
       <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -342,7 +364,7 @@ export default function AboutPage() {
                   <CardContent className="p-4 sm:p-6">
                     <Image
                       src={member.image || "/placeholder.svg"}
-                      alt={member.name}
+                      alt={`${member.name} - Expert ${member.role} at Web Tech Foundation Delhi`}
                       width={96}
                       height={96}
                       className="w-20 h-20 sm:w-24 sm:h-24 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
@@ -476,7 +498,7 @@ export default function AboutPage() {
                   <Link href={partner.link} target="_blank">
                   <Image
                     src={partner.logo || "/placeholder.svg"}
-                    alt={partner.name}
+                    alt={`${partner.name} - Hiring Partner of Web Tech Foundation New Delhi`}
                     width={150}
                     height={150}
                     className="max-h-24 w-auto mx-auto mb-3 sm:mb-4 transition-opacity duration-300 object-contain"
