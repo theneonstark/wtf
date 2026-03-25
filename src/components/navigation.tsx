@@ -19,7 +19,7 @@ export function Navigation() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <nav className="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/">
@@ -32,12 +32,15 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-black transition-colors duration-200"
+                className="text-slate-600 hover:text-primary font-medium transition-colors duration-200 relative group"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
-            <Button className="gradient-bg text-white font-semibold hover:opacity-90">Join Community</Button>
+            <Button className="gradient-bg text-white font-bold px-6 py-2 rounded-full hover:opacity-90 shadow-md transition-all active:scale-95">
+              Join Community
+            </Button>
           </div>
 
           {/* Mobile menu button */}

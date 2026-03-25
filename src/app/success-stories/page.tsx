@@ -16,7 +16,7 @@ export default function SuccessStoriesPage() {
       name: "Sarah Chen",
       role: "Senior Full Stack Developer",
       company: "Meta",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "After completing the Full Stack JavaScript course, I landed my dream job at Meta. The curriculum was perfectly aligned with industry needs, and the mentorship was invaluable.",
       beforeRole: "Marketing Coordinator",
@@ -31,7 +31,7 @@ export default function SuccessStoriesPage() {
       name: "Marcus Rodriguez",
       role: "AI Engineer",
       company: "OpenAI",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "The AI-Powered Web Apps course opened doors I never imagined. Now I'm working on cutting-edge AI projects that are shaping the future of technology.",
       beforeRole: "Junior Developer",
@@ -46,7 +46,7 @@ export default function SuccessStoriesPage() {
       name: "Emily Johnson",
       role: "Lead UX Designer",
       company: "Stripe",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "The Modern UI/UX Design course transformed my approach to design. I went from struggling freelancer to leading design at one of the world's top fintech companies.",
       beforeRole: "Freelance Designer",
@@ -61,7 +61,7 @@ export default function SuccessStoriesPage() {
       name: "David Kim",
       role: "DevOps Engineer",
       company: "Netflix",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "The DevOps & Cloud Architecture course gave me the skills to handle massive scale. Now I'm helping Netflix deliver content to millions of users worldwide.",
       beforeRole: "System Administrator",
@@ -76,7 +76,7 @@ export default function SuccessStoriesPage() {
       name: "Priya Patel",
       role: "Blockchain Developer",
       company: "Coinbase",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "The Blockchain & Web3 course positioned me perfectly for the crypto boom. I'm now building the financial infrastructure of the future.",
       beforeRole: "Backend Developer",
@@ -91,7 +91,7 @@ export default function SuccessStoriesPage() {
       name: "James Wilson",
       role: "Mobile App Developer",
       company: "Uber",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/experts/woman-user.png",
       story:
         "The Mobile-First Development course taught me React Native and Flutter. Now I'm building apps used by millions of riders daily.",
       beforeRole: "Web Developer",
@@ -106,7 +106,7 @@ export default function SuccessStoriesPage() {
       name: "Lisa Park",
       role: "Cybersecurity Analyst",
       company: "Microsoft",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/experts/woman-user.png",
       story:
         "The Cybersecurity Fundamentals course opened up a completely new career path. I'm now protecting enterprise systems at Microsoft.",
       beforeRole: "IT Support",
@@ -121,7 +121,7 @@ export default function SuccessStoriesPage() {
       name: "Chris Taylor",
       role: "Game Developer",
       company: "Epic Games",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/avatars/emily.png",
       story:
         "The Game Development course with Unity transformed my hobby into a career. Now I'm working on Fortnite and Unreal Engine.",
       beforeRole: "Graphic Designer",
@@ -135,22 +135,22 @@ export default function SuccessStoriesPage() {
   ]
 
   const companies = [
-    { name: "Google", logo: "/placeholder.svg?height=60&width=120", employees: 45 },
-    { name: "Meta", logo: "/placeholder.svg?height=60&width=120", employees: 38 },
-    { name: "Netflix", logo: "/placeholder.svg?height=60&width=120", employees: 23 },
-    { name: "Stripe", logo: "/placeholder.svg?height=60&width=120", employees: 19 },
-    { name: "OpenAI", logo: "/placeholder.svg?height=60&width=120", employees: 15 },
-    { name: "Vercel", logo: "/placeholder.svg?height=60&width=120", employees: 12 },
-    { name: "Shopify", logo: "/placeholder.svg?height=60&width=120", employees: 28 },
-    { name: "Discord", logo: "/placeholder.svg?height=60&width=120", employees: 17 },
-    { name: "Airbnb", logo: "/placeholder.svg?height=60&width=120", employees: 31 },
-    { name: "Uber", logo: "/placeholder.svg?height=60&width=120", employees: 26 },
-    { name: "Microsoft", logo: "/placeholder.svg?height=60&width=120", employees: 52 },
-    { name: "Amazon", logo: "/placeholder.svg?height=60&width=120", employees: 67 },
-    { name: "Apple", logo: "/placeholder.svg?height=60&width=120", employees: 34 },
-    { name: "Tesla", logo: "/placeholder.svg?height=60&width=120", employees: 21 },
-    { name: "Coinbase", logo: "/placeholder.svg?height=60&width=120", employees: 18 },
-    { name: "Epic Games", logo: "/placeholder.svg?height=60&width=120", employees: 14 },
+    { name: "Google", logo: "/images/avatars/shivam.png", employees: 45 },
+    { name: "Meta", logo: "/experts/shahid.png", employees: 38 },
+    { name: "Netflix", logo: "/images/avatars/marcus.png", employees: 23 },
+    { name: "Stripe", logo: "/images/avatars/emily.png", employees: 19 },
+    { name: "OpenAI", logo: "/images/avatars/alex.png", employees: 15 },
+    { name: "Vercel", logo: "/experts/woman-user.png", employees: 12 },
+    { name: "Shopify", logo: "/experts/woman-user.png", employees: 28 },
+    { name: "Discord", logo: "/experts/woman-user.png", employees: 17 },
+    { name: "Airbnb", logo: "/experts/woman-user.png", employees: 31 },
+    { name: "Uber", logo: "/experts/woman-user.png", employees: 26 },
+    { name: "Microsoft", logo: "/experts/woman-user.png", employees: 52 },
+    { name: "Amazon", logo: "/experts/woman-user.png", employees: 67 },
+    { name: "Apple", logo: "/experts/woman-user.png", employees: 34 },
+    { name: "Tesla", logo: "/experts/woman-user.png", employees: 21 },
+    { name: "Coinbase", logo: "/experts/woman-user.png", employees: 18 },
+    { name: "Epic Games", logo: "/experts/woman-user.png", employees: 14 },
   ]
 
   const stats = [

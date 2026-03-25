@@ -267,11 +267,11 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h1 className="text-5xl font-bold mb-6">
-              Future-Ready <span className="gradient-text">Courses</span>
+              Future-Ready <span className="gradient-text">Programs in Delhi NCR</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Master the technologies that will define the next decade of software development. From AI and blockchain
-              to advanced web development and cybersecurity.
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+              Master the technologies that will define the next decade. Our **Badarpur, New Delhi center** 
+              offers advanced training in AI, Blockchain, Web Development, and Cybersecurity.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
@@ -301,8 +301,8 @@ export default function CoursesPage() {
                 key={filter}
                 variant={activeFilter === filter ? "default" : "ghost"}
                 onClick={() => setActiveFilter(filter)}
-                className={`whitespace-nowrap flex items-center gap-2 ${
-                  activeFilter === filter ? "gradient-bg text-white" : "text-gray-600 hover:text-black"
+                className={`whitespace-nowrap flex items-center gap-2 rounded-full px-6 py-2 transition-all ${
+                  activeFilter === filter ? "gradient-bg text-white shadow-md scale-105" : "text-slate-600 hover:text-primary hover:bg-slate-100"
                 }`}
               >
                 {getCategoryIcon(filter)}
@@ -318,26 +318,26 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-black">{filteredCourses.length}</div>
-              <div className="text-gray-600">Available Courses</div>
+              <div className="text-3xl font-bold text-slate-900">{filteredCourses.length}</div>
+              <div className="text-slate-600">Available Courses</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-black">
+              <div className="text-3xl font-bold text-slate-900">
                 {filteredCourses.reduce((acc, course) => acc + course.students, 0).toLocaleString()}
               </div>
-              <div className="text-gray-600">Total Enrollments</div>
+              <div className="text-slate-600">Total Enrollments</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-black">
+              <div className="text-3xl font-bold text-slate-900">
                 {(filteredCourses.reduce((acc, course) => acc + course.rating, 0) / filteredCourses.length).toFixed(1)}
               </div>
-              <div className="text-gray-600">Average Rating</div>
+              <div className="text-slate-600">Average Rating</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-black">
+              <div className="text-3xl font-bold text-slate-900">
                 {filteredCourses.reduce((acc, course) => acc + course.projects, 0)}
               </div>
-              <div className="text-gray-600">Total Projects</div>
+              <div className="text-slate-600">Total Projects</div>
             </div>
           </div>
         </div>
@@ -354,7 +354,7 @@ export default function CoursesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="bg-white border-gray-200 hover:border-black/50 transition-all duration-300 h-full group shadow-sm">
+                <Card className="glass-card card-hover-glow border-slate-200/50 h-full group shadow-lg overflow-hidden flex flex-col">
                   <div className="relative overflow-hidden">
                     <Image
                       src={course.image || "/placeholder.svg"}
@@ -367,7 +367,7 @@ export default function CoursesPage() {
                       <Badge className={getLevelColor(course.level)}>{course.level}</Badge>
                     </div>
                     <div className="absolute top-4 right-4">
-                      <Badge variant="outline" className="bg-white/90 border-gray-300">
+                      <Badge variant="outline" className="bg-white/90 border-primary text-primary font-bold">
                         {course.projects} Projects
                       </Badge>
                     </div>
@@ -381,18 +381,18 @@ export default function CoursesPage() {
                       </Badge>
                       {/* <span className="text-2xl font-bold text-black">{course.price}</span> */}
                     </div>
-                    <CardTitle className="text-black group-hover:text-gray-600 transition-colors">
+                    <CardTitle className="text-slate-900 group-hover:text-primary transition-colors font-bold">
                       {course.title}
                     </CardTitle>
-                    <p className="text-sm text-gray-600">Instructor: {course.instructor}</p>
+                    <p className="text-sm text-slate-500 italic">Instructor: {course.instructor}</p>
                   </CardHeader>
 
                   <CardContent>
-                    <p className="text-gray-600 mb-4">{course.description}</p>
+                    <p className="text-slate-600 mb-4 line-clamp-2">{course.description}</p>
 
                     <div className="flex flex-wrap gap-1 mb-4">
                       {course.features.slice(0, 3).map((feature, idx) => (
-                        <Badge key={idx} variant="secondary" className="text-xs bg-gray-100 text-gray-700">
+                        <Badge key={idx} variant="secondary" className="text-xs bg-primary/5 text-primary border-primary/20">
                           {feature}
                         </Badge>
                       ))}

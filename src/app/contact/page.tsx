@@ -40,8 +40,40 @@ export default function ContactPage() {
     console.log("Form submitted")
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Web Tech Foundation (WTF)",
+    "image": "https://www.webtechfoundation.in/logo.png",
+    "@id": "https://www.webtechfoundation.in",
+    "url": "https://www.webtechfoundation.in",
+    "telephone": "+91 9211579757",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Meethapur, Badarpur",
+      "addressLocality": "New Delhi",
+      "postalCode": "110044",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 28.5087,
+      "longitude": 77.3071
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  };
+
   return (
     <div className="pt-16 min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -57,7 +89,7 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -174,7 +206,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-gradient-to-b from-transparent to-gray-50">
+      <section className="py-20 bg-gradient-to-b from-transparent to-gray-50 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -184,10 +216,10 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-4">
-              Find <span className="gradient-text">Our Office</span>
+              Find <span className="gradient-text">Our Delhi Center</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Located in the heart of San Francisco&#39;s tech district
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Our main campus is located in Badarpur, New Delhi, serving students across the NCR region.
             </p>
           </motion.div>
 
@@ -197,13 +229,18 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <Card className="bg-white border-gray-200 overflow-hidden shadow-sm">
-              <div className="h-96 bg-gray-100 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="h-12 w-12 text-black mx-auto mb-4" />
-                  <p className="text-black text-lg">Interactive Map</p>
-                  <p className="text-gray-600">123 Future Street, Tech District, SF 94105</p>
-                </div>
+            <Card className="bg-white border-slate-200 overflow-hidden shadow-xl rounded-2xl">
+              <div className="h-[450px] w-full">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.518600024!2d77.3045!3d28.5087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMwJzMxLjMiTiA3N8KwMTgnMTYuMiJF!5e0!3m2!1sen!2sin!4v1711380000000!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Web Tech Foundation Location"
+                ></iframe>
               </div>
             </Card>
           </motion.div>
@@ -211,7 +248,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
+      <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"

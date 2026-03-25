@@ -10,9 +10,43 @@ import Background from "@/components/background"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Best Computer Institute in Delhi | Web Tech Foundation",
-  description: "Web Tech Foundation is a reputed organization in Delhi-NCR which provides Training in PHP, Java, NIELIT(DOEACC), Digital Marketing, Tally",
-  keywords: "web development, programming, education, future tech, coding bootcamp",
+  title: "Best Computer Institute in Delhi NCR | Web Tech Foundation – Coding, AI & Web Development Courses in Badarpur, New Delhi",
+  description:
+    "Web Tech Foundation (WTF) is Delhi NCR's leading computer training institute in Badarpur, New Delhi. Learn Full Stack Web Development, AI, React, Next.js, Python, Digital Marketing & more. 900+ students trained, 73% placement rate. Enroll now!",
+  keywords:
+    "best computer institute in delhi, computer classes in delhi ncr, coding classes badarpur, web development course delhi, AI course new delhi, react next.js training delhi ncr, python course delhi, digital marketing course delhi, full stack developer course delhi ncr, web tech foundation, WTF delhi, computer training institute near me, NIELIT delhi, DOEACC delhi, programming classes south delhi",
+  openGraph: {
+    title: "Best Computer Institute in Delhi NCR | Web Tech Foundation",
+    description:
+      "Delhi NCR's top-rated computer training institute. Master Full Stack Development, AI, React, Next.js & more at Badarpur, New Delhi. 900+ students trained.",
+    url: "https://www.webtechfoundation.in",
+    siteName: "Web Tech Foundation",
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best Computer Institute in Delhi NCR | Web Tech Foundation",
+    description:
+      "Delhi NCR's top-rated computer training institute. Master Full Stack Development, AI, React, Next.js & more.",
+  },
+  alternates: {
+    canonical: "https://www.webtechfoundation.in",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  other: {
+    "geo.region": "IN-DL",
+    "geo.placename": "New Delhi",
+    "geo.position": "28.5087;77.3071",
+    ICBM: "28.5087, 77.3071",
+  },
 }
 
 export default function RootLayout({
@@ -27,7 +61,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <div className="min-h-screen bg-white text-black">
+          <div className="min-h-screen bg-white text-slate-900">
             <Navigation />
             <Background />
             <main>{children}</main>

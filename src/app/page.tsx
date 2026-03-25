@@ -32,6 +32,32 @@ import Link from "next/link"
 export default function HomePage() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Web Tech Foundation (WTF)",
+    "description": "Best Computer Institute in Delhi NCR providing advanced training in Web Development, AI, and Software Engineering.",
+    "url": "https://www.webtechfoundation.in",
+    "logo": "https://www.webtechfoundation.in/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Meethapur, Badarpur",
+      "addressLocality": "New Delhi",
+      "addressRegion": "DL",
+      "postalCode": "110044",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9211579757",
+      "contactType": "customer service"
+    },
+    "sameAs": [
+      "https://www.youtube.com/@WTFCodee",
+      "https://www.linkedin.com/company/wtfcode/"
+    ]
+  };
+
   const features = [
     {
       icon: <Code className="h-6 sm:h-8 w-6 sm:w-8" />,
@@ -79,57 +105,57 @@ export default function HomePage() {
       content:
         "WTF transformed my career. The future-focused approach gave me skills that set me apart in interviews. The mentorship program was incredible!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/avatars/shivam.png",
       course: "Full Stack JavaScript",
       salaryIncrease: "180%",
     },
     {
       name: "Marcus Rodriguez",
-      role: "AI Engineer at OpenAI",
+      role: "AI Engineer",
       content:
         "The AI and machine learning courses here are unmatched. I landed my dream job within 3 months of completing the program.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/avatars/marcus.png",
       course: "AI-Powered Web Apps",
       salaryIncrease: "250%",
     },
     {
       name: "Emily Johnson",
-      role: "Senior Frontend Developer at Stripe",
+      role: "Senior Frontend Developer",
       content:
         "The community support and mentorship made all the difference. The projects I built are still in my portfolio today!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/avatars/emily.png",
       course: "Advanced React & Next.js",
       salaryIncrease: "200%",
     },
     {
       name: "Alex Thompson",
-      role: "DevOps Engineer at Netflix",
+      role: "DevOps Engineer",
       content:
         "The hands-on projects and real-world scenarios prepared me perfectly for my current role. Amazing experience!",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/images/avatars/alex.png",
       course: "DevOps & Cloud Architecture",
       salaryIncrease: "160%",
     },
     {
       name: "Priya Patel",
-      role: "UX Designer at Airbnb",
+      role: "UX Designer",
       content:
         "From zero design experience to landing at Airbnb in 6 months. The curriculum is incredibly well-structured.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/experts/woman-user.png",
       course: "Modern UI/UX Design",
       salaryIncrease: "220%",
     },
     {
       name: "James Wilson",
-      role: "Blockchain Developer at Coinbase",
+      role: "Blockchain Developer",
       content:
         "The emerging tech courses kept me ahead of the curve. Now I'm building the future of finance with Web3 technologies.",
       rating: 5,
-      image: "/placeholder.svg?height=80&width=80",
+      image: "/experts/amit_sir.png",
       course: "Blockchain & Web3",
       salaryIncrease: "300%",
     },
@@ -192,34 +218,34 @@ export default function HomePage() {
 
   const faqs = [
     {
-      question: "How long are the courses?",
+      question: "Where is Web Tech Foundation (WTF) located?",
       answer:
-        "Our courses range from 6-16 weeks depending on the program. Each is designed for intensive, focused learning with flexible scheduling options to accommodate working professionals.",
+        "We are conveniently located in Meethapur, Badarpur, New Delhi (110044), making us easily accessible for students across Delhi NCR, including Faridabad and South Delhi.",
     },
     {
-      question: "Do you offer job placement assistance?",
+      question: "Do you offer offline classes in Delhi NCR?",
       answer:
-        "Yes! We have a 95% job placement rate and provide comprehensive career support including resume reviews, interview preparation, salary negotiation coaching, and direct connections to our 10+ partner companies.",
+        "Yes, we offer both offline classroom training at our Badarpur center and online live sessions for students who prefer remote learning.",
+    },
+    {
+      question: "How long are the courses at WTF Delhi?",
+      answer:
+        "Our courses range from 6-16 weeks depending on the program. Each is designed for intensive, focused learning with flexible scheduling options to accommodate working professionals in Delhi NCR.",
+    },
+    {
+      question: "Do you offer job placement assistance in Delhi?",
+      answer:
+        "Yes! We have a strong network of 500+ partner companies in Delhi, Noida, and Gurugram. We provide comprehensive career support including resume reviews and direct interview connections.",
     },
     {
       question: "What are the prerequisites?",
       answer:
-        "Prerequisites vary by course, but most require basic computer literacy and problem-solving skills. We offer prep courses for complete beginners and provide pre-course materials to help you get ready.",
+        "Prerequisites vary by course, but most require basic computer literacy. We offer prep courses for complete beginners at our Delhi center.",
     },
     {
       question: "Is there a money-back guarantee?",
       answer:
-        "We offer a 30-day money-back guarantee. If you're not satisfied with your learning experience within the first 30 days, we'll provide a full refund, no questions asked.",
-    },
-    {
-      question: "Can I learn while working full-time?",
-      answer:
-        "Absolutely! Our courses are designed with working professionals in mind. We offer evening classes, weekend sessions, and self-paced options to fit your schedule.",
-    },
-    {
-      question: "What kind of support do you provide?",
-      answer:
-        "We provide 24/7 community support, weekly 1-on-1 mentorship sessions, career coaching, technical support, and lifetime access to our alumni network.",
+        "We offer a 30-day money-back guarantee. If you're not satisfied with your learning experience within the first 30 days, we'll provide a full refund.",
     },
   ]
 
@@ -284,6 +310,10 @@ export default function HomePage() {
 
   return (
     <div className="pt-16 w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-transparent to-gray-50" />
@@ -294,25 +324,25 @@ export default function HomePage() {
             </Badge>
 
             <motion.div
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <span className="gradient-text">Decode the Future</span>
+              <span className="gradient-text">Top Computer Institute</span>
               <br />
-              <span className="text-black">with Us</span>
+              <span className="text-slate-900">in Delhi NCR</span>
             </motion.div>
 
             <motion.div
-              className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Join the bold tech-education revolution. Master tomorrow&apos;s technologies today with AI, Blockchain,
-              Advanced Web Development, and cutting-edge frameworks. Get job-ready in 6-16 weeks with our
-              industry-leading curriculum.
+              Empower your career with Web Tech Foundation (WTF). Master AI, Web Development, and 
+              Future Tech at the premier coding bootcamp in **Badarpur, New Delhi**. 
+              Get industry-ready in 6-16 weeks with our expert-led localized curriculum.
             </motion.div>
 
             <motion.div
@@ -321,15 +351,15 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Button size="lg" className="gradient-bg text-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 neon-glow">
+              <Button size="lg" className="gradient-bg text-white font-semibold text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 neon-glow border-none">
                 Explore Courses
                 <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
               </Button>
               <Button
                 size="lg"
-                className="border border-black text-black hover:bg-black hover:text-white text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent"
+                className="border-2 border-slate-200 text-slate-900 hover:border-primary hover:bg-slate-50 text-sm sm:text-base md:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white/50 backdrop-blur-sm"
               >
-                <PlayCircle className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
+                <PlayCircle className="mr-2 h-4 sm:h-5 w-4 sm:w-5 text-primary" />
                 Watch Demo
               </Button>
             </motion.div>
@@ -364,10 +394,11 @@ export default function HomePage() {
             viewport={{ once: true }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-              Welcome to <span className="gradient-text">Web Tech Foundation</span>
+              Why Choose <span className="gradient-text">WTF in Delhi NCR</span>?
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-              The WTF - Web Tech Foundation, recognized by Department of Electronics , Govt. of India, is a well-reputed organization in the field of IT industry, is running its educational division by the name of “Web Tech Foundation (WTF)“
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+              Web Tech Foundation (WTF) is a Govt. of India recognized IT training organization. 
+              We provide the most practical tech education in **New Delhi**, empowering students with skills that matter.
             </p>
           </motion.div>
 
@@ -380,14 +411,14 @@ export default function HomePage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white border-gray-200 hover:border-black/50 transition-all duration-300 h-full shadow-sm group">
+                <Card className="glass-card card-hover-glow border-slate-200/50 h-full shadow-lg group">
                   <CardContent className="p-6 sm:p-8 text-center">
-                    <div className="text-black mb-4 sm:mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-primary mb-4 sm:mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
-                    <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-black">{feature.title}</h3>
-                    <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">{feature.description}</p>
-                    <p className="text-xs sm:text-sm text-gray-500">{feature.details}</p>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-slate-900">{feature.title}</h3>
+                    <p className="text-sm sm:text-base text-slate-600 mb-3 sm:mb-4">{feature.description}</p>
+                    <p className="text-xs sm:text-sm text-slate-400 font-medium tracking-wide uppercase">{feature.details}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -467,12 +498,12 @@ export default function HomePage() {
 
           <div className="text-center">
             <Button
-              className="border-1 border-black text-black hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
+              className="border-2 border-slate-200 text-slate-900 hover:border-primary hover:text-primary hover:bg-slate-50 bg-white/50 backdrop-blur-sm text-sm sm:text-base px-8 py-6 rounded-xl font-semibold transition-all"
             >              
                   <Link href="/courses">
-                    View All Courses
+                    View All Programs in Delhi
                   </Link>
-              <ArrowRight className="ml-2 h-3 sm:h-4 w-3 sm:w-4" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </div>
         </div>
@@ -740,11 +771,12 @@ export default function HomePage() {
           >
             <div className="max-w-4xl mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
-                Ready to <span className="gradient-text">Shape Your Future</span>?
+                Start Your Career in <span className="gradient-text">Delhi NCR</span>
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-                Join 15,000+ developers who are already building tomorrow&apos;s applications. Start your transformation
-                today with our proven curriculum, expert mentorship, and industry connections.
+              <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 leading-relaxed">
+                Join 15,000+ developers in the **Delhi NCR region** who are building the future. 
+                Our Badarpur center is open for admissions. Start your transformation today with expert 
+                mentorship and guaranteed interview support.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">

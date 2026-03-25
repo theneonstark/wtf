@@ -54,13 +54,13 @@ export default function EnrollPage() {
     "rating": 4.9,
     "reviews": 324,
     "level": "Advanced",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Sarah Chen",
       "title": "Senior React Engineer at Meta",
       "experience": "12+ years",
       "students": 3200,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Advanced React Patterns & Hooks",
@@ -136,13 +136,13 @@ export default function EnrollPage() {
     "rating": 4.9,
     "reviews": 189,
     "level": "Advanced",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Dr. Emily Zhang",
       "title": "AI Research Director",
       "experience": "16+ years",
       "students": 1800,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "OpenAI API Integration",
@@ -213,13 +213,13 @@ export default function EnrollPage() {
     "rating": 4.8,
     "reviews": 267,
     "level": "Intermediate",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Marcus Johnson",
       "title": "Full Stack Architect at Netflix",
       "experience": "14+ years",
       "students": 2900,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "MongoDB Database Design",
@@ -305,13 +305,13 @@ export default function EnrollPage() {
     "rating": 4.7,
     "reviews": 210,
     "level": "Beginner",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Alex Rivera",
       "title": "Lead UX Designer at Adobe",
       "experience": "10+ years",
       "students": 2500,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Figma for Prototyping",
@@ -374,13 +374,13 @@ export default function EnrollPage() {
     "rating": 4.8,
     "reviews": 145,
     "level": "Advanced",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "David Kim",
       "title": "Cloud Architect at Google",
       "experience": "15+ years",
       "students": 2000,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Docker Containerization",
@@ -458,13 +458,13 @@ export default function EnrollPage() {
     "rating": 4.6,
     "reviews": 198,
     "level": "Intermediate",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Lisa Park",
       "title": "Mobile Developer at Uber",
       "experience": "11+ years",
       "students": 2300,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Responsive Design Techniques",
@@ -532,13 +532,13 @@ export default function EnrollPage() {
     "rating": 4.8,
     "reviews": 120,
     "level": "Advanced",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "James Wilson",
       "title": "Blockchain Engineer at ConsenSys",
       "experience": "9+ years",
       "students": 1500,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Solidity Programming",
@@ -611,13 +611,13 @@ export default function EnrollPage() {
     "rating": 4.7,
     "reviews": 95,
     "level": "Intermediate",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Michael Brown",
       "title": "Cybersecurity Expert at Cisco",
       "experience": "13+ years",
       "students": 1700,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Ethical Hacking Techniques",
@@ -680,13 +680,13 @@ export default function EnrollPage() {
     "rating": 4.6,
     "reviews": 140,
     "level": "Intermediate",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Chris Taylor",
       "title": "Game Developer at Epic Games",
       "experience": "12+ years",
       "students": 2100,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Unity 3D Development",
@@ -764,13 +764,13 @@ export default function EnrollPage() {
     "rating": 4.8,
     "reviews": 230,
     "level": "Beginner",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Dr. Anna Rodriguez",
       "title": "Data Scientist at IBM",
       "experience": "14+ years",
       "students": 2700,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Python for Data Science",
@@ -843,13 +843,13 @@ export default function EnrollPage() {
     "rating": 4.9,
     "reviews": 180,
     "level": "Advanced",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Robert Chen",
       "title": "Backend Engineer at Stripe",
       "experience": "13+ years",
       "students": 2200,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "TypeScript Advanced Features",
@@ -917,13 +917,13 @@ export default function EnrollPage() {
     "rating": 4.7,
     "reviews": 150,
     "level": "Intermediate",
-    "image": "/placeholder.svg?height=400&width=600",
+    "image": "/images/Nextjs-Vs-React.jpg",
     "instructor": {
       "name": "Jennifer Lee",
       "title": "Frontend Developer at Airbnb",
       "experience": "10+ years",
       "students": 1900,
-      "image": "/placeholder.svg?height=100&width=100"
+      "image": "/experts/woman-user.png"
     },
     "features": [
       "Service Workers Implementation",
@@ -1007,7 +1007,7 @@ export default function EnrollPage() {
   }
 
   return (
-    <div className="pt-16 min-h-screen bg-gray-50">
+    <div className="pt-16 min-h-screen bg-transparent relative z-10">
       {/* Header */}
       <section className="py-12 border-b relative z-10 border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1037,7 +1037,7 @@ export default function EnrollPage() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              {/* <div className="flex items-center gap-4">
                 <img
                   src={course.instructor.image || "/placeholder.svg"}
                   alt={course.instructor.name}
@@ -1047,7 +1047,7 @@ export default function EnrollPage() {
                   <p className="font-semibold text-black">{course.instructor.name}</p>
                   <p className="text-sm text-gray-600">{course.instructor.title}</p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
 
             <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
@@ -1061,7 +1061,7 @@ export default function EnrollPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2">

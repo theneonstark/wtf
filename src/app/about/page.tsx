@@ -36,7 +36,7 @@ export default function AboutPage() {
   name: "Sabra",
   role: "COO & Managing Director",
   bio: "Operational excellence specialist with deep expertise in managing teams, optimizing processes, and ensuring organizational growth and stability.",
-  image: "/placeholder.svg?height=300&width=300",
+  image: "/experts/woman-user.png",
   skills: ["Operations Management", "Process Optimization", "People Management"],
   experience: "11 years",
   education: "Master’s in Management, London Business School",
@@ -46,7 +46,7 @@ export default function AboutPage() {
     //   name: "Abhishek",
     //   role: "AI Research Director",
     //   bio: "Leading AI researcher specializing in machine learning applications. Published 50+ papers in top-tier conferences.",
-    //   image: "/placeholder.svg?height=300&width=300",
+    //   image: "/experts/woman-user.png",
     //   skills: ["Machine Learning", "Deep Learning", "Research"],
     //   experience: "16 years",
     //   education: "PhD AI, Carnegie Mellon",
@@ -56,7 +56,7 @@ export default function AboutPage() {
     //   name: "Mohd Alquama",
     //   role: "Lead Instructor",
     //   bio: "Full-stack architect with expertise in scalable systems. Mentored 1000+ developers into successful tech careers.",
-    //   image: "/placeholder.svg?height=300&width=300",
+    //   image: "/experts/woman-user.png",
     //   skills: ["Full Stack", "Cloud Architecture", "Mentoring"],
     //   experience: "14 years",
     //   education: "BS Computer Science, UC Berkeley",
@@ -76,7 +76,7 @@ export default function AboutPage() {
     //   name: "David Kim",
     //   role: "DevOps Architect",
     //   bio: "Cloud infrastructure expert with experience scaling systems for millions of users. Former Netflix and Uber engineer.",
-    //   image: "/placeholder.svg?height=300&width=300",
+    //   image: "/experts/woman-user.png",
     //   skills: ["DevOps", "Cloud Computing", "System Design"],
     //   experience: "13 years",
     //   education: "MS Systems Engineering, Georgia Tech",
@@ -209,10 +209,10 @@ export default function AboutPage() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               About <span className="gradient-text">WTF - Web Tech Foundation</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8">
-              We&#39;re not just teaching code – we&#39;re preparing the next generation of developers for a rapidly evolving
-              technological landscape. Founded in 2019, we&#39;ve become the leading platform for future-ready tech
-              education.
+            <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-6 sm:mb-8">
+              We&#39;re **Delhi NCR&#39;s premier tech foundation**, preparing the next generation of developers for a 
+              rapidly evolving technological landscape. Headquartered in **Badarpur, New Delhi**, we bridge 
+              the gap between traditional education and industry requirements.
             </p>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-4 text-xs sm:text-sm">
               <Badge className="bg-black text-white px-3 py-1 sm:px-4 sm:py-2">Founded 2025</Badge>
@@ -237,10 +237,10 @@ export default function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                 Our <span className="gradient-text">Mission</span>
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
-                At WTF (Web Tech Foundation), we believe that traditional education isn&#39;t keeping pace with technological
+              <p className="text-sm sm:text-base md:text-lg text-slate-600 mb-4 sm:mb-6">
+                At **WTF (Web Tech Foundation)**, we believe that traditional education isn&#39;t keeping pace with technological
                 advancement. We&#39;re bridging that gap by providing cutting-edge, future-focused education that prepares
-                developers for tomorrow&#39;s challenges.
+                developers in **Delhi and across India** for tomorrow&#39;s challenges.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6">
                 Our curriculum is constantly evolving, incorporating the latest technologies and industry best practices
@@ -297,11 +297,11 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white border-gray-200 h-full text-center shadow-sm">
+                <Card className="glass-card card-hover-glow border-slate-200/50 h-full text-center shadow-lg">
                   <CardContent className="p-4 sm:p-6">
-                    <div className="text-black mb-3 sm:mb-4 flex justify-center">{value.icon}</div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3">{value.title}</h3>
-                    <p className="text-sm sm:text-base text-gray-600">{value.description}</p>
+                    <div className="text-primary mb-3 sm:mb-4 flex justify-center">{value.icon}</div>
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">{value.title}</h3>
+                    <p className="text-sm sm:text-base text-slate-600">{value.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -427,8 +427,8 @@ export default function AboutPage() {
                         <div className="text-xl sm:text-2xl font-bold text-black">{item.year}</div>
                         <Badge className="bg-gray-100 text-gray-700 text-xs sm:text-sm mt-2 sm:mt-0">{item.milestone}</Badge>
                       </div>
-                      <h3 className="text-lg sm:text-xl font-semibold text-black mb-2 sm:mb-3">{item.title}</h3>
-                      <p className="text-sm sm:text-base text-gray-600">{item.description}</p>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3">{item.title}</h3>
+                      <p className="text-sm sm:text-base text-slate-600">{item.description}</p>
                     </CardContent>
                   </Card>
                 </div>
